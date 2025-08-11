@@ -49,7 +49,7 @@ npm install
 ```
 
 ## 👤 Autor
-Kawan Shigueo Watanabe – Desenvolvimento completo (Frontend, 3D, UI/UX)
+Kawan Shigueo Watanabe
 
 📄 Licença
 Este projeto foi desenvolvido para fins de apresentação no Hackathon da Saúde.

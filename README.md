@@ -1,69 +1,56 @@
-# React + TypeScript + Vite
+# 🩺 TelTech
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**TelTech** é um aplicativo desenvolvido em **2 dias** durante um **Hackathon da Saúde**.  
+O app permite **visualizar um modelo 3D do corpo humano** e **selecionar partes específicas** para registrar o que o usuário está sentindo — tornando a comunicação de sintomas mais clara e visual.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Funcionalidades
 
-## Expanding the ESLint configuration
+- 🧍 **Modelo 3D interativo** do corpo humano (rotacionar/zoom).
+- 🖱 **Seleção de partes do corpo** diretamente no modelo.
+- 📝 **Registro de sintomas** (intensidade, tipo, observações).
+- 💡 **Interface leve e responsiva**, executa 100% no front-end.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🎯 Objetivo
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Facilitar o **relato preciso** de sintomas pelo paciente.  
+- Ajudar profissionais a **entender rapidamente** o contexto.  
+- Servir como **suporte visual** para consultas presenciais e telemedicina.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🛠 Tecnologias
+
+- **React** + **TypeScript**
+- **Three.js** (renderização 3D / WebGL)
+- **Vite** (ambiente de desenvolvimento)
+- **CSS** (estilização)
+
+---
+
+## 🚀 Como executar
+
+### 1) Pré-requisitos
+- Node.js **18+**
+- NPM ou Yarn
+
+### 2) Instalação
+```bash
+
+# Entrar na pasta
+cd teltech
+
+# Instalar dependências
+npm install
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 👤 Autor
+Kawan Shigueo Watanabe – Desenvolvimento completo (Frontend, 3D, UI/UX)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+📄 Licença
+Este projeto foi desenvolvido para fins de apresentação no Hackathon da Saúde.
+Sinta-se livre para usar como inspiração, mas não para fins comerciais sem autorização.

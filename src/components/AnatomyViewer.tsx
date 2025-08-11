@@ -5,6 +5,7 @@ import { Canvas, useThree, useFrame } from "@react-three/fiber";
 import { useGLTF } from "@react-three/drei";
 import { AnimatePresence } from "framer-motion";
 import AnimatedSymptomsForm from "./AnimatedSymptomsForm";
+import Iridescence from "./Iridescence/Iridescence";
 
 // normalized [0–1]
 interface Rect { xMin: number; xMax: number; yMin: number; yMax: number; }
@@ -22,42 +23,42 @@ const regions: Region[] = [
     rects: [{ xMin: 0.48, xMax: 0.52, yMin: 0.05, yMax: 0.2 }],
     cameraPos: new THREE.Vector3(0, 2.5, 1.5),
     target:    new THREE.Vector3(0, 1.8, 0),
-    color:     "rgba(255,0,0,0.2)",
+    color:     "",
   },
   {
     name: "Tórax",
     rects: [{ xMin: 0.46, xMax: 0.54, yMin: 0.22, yMax: 0.35 }],
     cameraPos: new THREE.Vector3(0, 1.6, 2.0),
     target:    new THREE.Vector3(0, 1.2, 0),
-    color:     "rgba(0,255,0,0.2)",
+    color:     "",
   },
   {
     name: "Braço Esquerdo",
     rects: [{ xMin: 0.35, xMax: 0.45, yMin: 0.40, yMax: 0.52 }],
     cameraPos: new THREE.Vector3(-1.5, 1.4, 1.5),
     target:    new THREE.Vector3(-0.5, 1.2, 0),
-    color:     "rgba(0,0,255,0.2)",
+    color:     "",
   },
   {
     name: "Braço Direito",
     rects: [{ xMin: 0.55, xMax: 0.65, yMin: 0.40, yMax: 0.52 }],
     cameraPos: new THREE.Vector3(1.5, 1.4, 1.5),
     target:    new THREE.Vector3(0.5, 1.2, 0),
-    color:     "rgba(0,0,255,0.2)",
+    color:     "",
   },
   {
     name: "Abdômen",
     rects: [{ xMin: 0.46, xMax: 0.54, yMin: 0.35, yMax: 0.5 }],
     cameraPos: new THREE.Vector3(0, 1.0, 2.5),
     target:    new THREE.Vector3(0, 0.8, 0),
-    color:     "rgba(255,255,0,0.2)",
+    color:     "",
   },
   {
     name: "Pernas",
     rects: [{ xMin: 0.44, xMax: 0.56, yMin: 0.5, yMax: 0.95 }],
     cameraPos: new THREE.Vector3(0, 0.2, 3.0),
     target:    new THREE.Vector3(0, 0.2, 0),
-    color:     "rgba(255,0,255,0.2)",
+    color:     "",
   },
 ];
 
@@ -110,6 +111,7 @@ export default function AnatomyViewer() {
           }}/>;
         })
       )}
+
 
       <AnimatePresence>
         {selectedPart && (

@@ -48,9 +48,13 @@ npm install
 
 ```
 
+---
+
 ## 👤 Autor
 Kawan Shigueo Watanabe
 
-📄 Licença
+---
+
+## 📄 Licença
 Este projeto foi desenvolvido para fins de apresentação no Hackathon da Saúde.
 Sinta-se livre para usar como inspiração, mas não para fins comerciais sem autorização.
